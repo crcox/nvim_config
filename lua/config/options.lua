@@ -1,0 +1,16 @@
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.termguicolors = true
+vim.opt.mouse = "a"
+vim.opt.signcolumn = "yes"
+vim.opt.exrc = true
+vim.opt.secure = true
+vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+vim.opt.grepformat = "%f:%l:%c:%m"
+
