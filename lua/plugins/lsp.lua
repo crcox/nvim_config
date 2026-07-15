@@ -43,6 +43,14 @@ return {
         "quarto",
       },
       capabilities = capabilities,
+      settings = {
+        r = {
+          lsp = {
+            diagnostics = true,
+            rich_documentation = false,
+          },
+        },
+      },
     })
     vim.lsp.enable("pyright")
     vim.lsp.enable("r_language_server")

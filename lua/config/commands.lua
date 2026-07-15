@@ -1,3 +1,4 @@
+-- Auto-Commands
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "quarto",
   callback = function()
@@ -5,6 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- User Commands
 vim.api.nvim_create_user_command(
   "RDocument",
   function()
@@ -27,3 +29,4 @@ vim.api.nvim_create_user_command(
   end,
   {}
 )
+

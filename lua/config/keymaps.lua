@@ -37,3 +37,6 @@ vim.keymap.set(
   "<CMD>Oil<CR>",
   { desc = "Open parent directory" }
 )
+
+-- R Document
+vim.keymap.set("n", "<leader>rd", ":RDocument<CR>", { desc = "Rebuild documentation and NAMESPACE" })
