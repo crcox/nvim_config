@@ -3,7 +3,15 @@ return {
   lazy = false,
   build = ":TSUpdate",
   opts = {
-    ensure_installed = { "python", "lua", "vimdoc" },
+    ensure_installed = {
+      "python",
+      "lua",
+      "vimdoc",
+      "yaml",
+      "r",
+      "markdown",
+      "markdown_inline",
+    },
     highlight = { enable = true },
   }
 }

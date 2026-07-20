@@ -9,5 +9,7 @@ return {
   require("plugins.otter"),
   require("plugins.lint"),
   require("plugins.gitsigns"),
+  require("plugins.markdown"),
+  require("plugins.otter"),
   --require("plugins.iron"),
 }

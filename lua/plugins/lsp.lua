@@ -8,13 +8,6 @@ return {
   },
   config = function()
 
-    require("mason-lspconfig").setup({
-      dependencies = { "williamboman/mason.nvim" },
-      opts = {
-        ensure_installed = { "pyright" },
-      },
-    })
-
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     vim.lsp.config("pyright", {
       capabilities = capabilities,
