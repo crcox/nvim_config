@@ -1,8 +1,12 @@
 -- Auto-Commands
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "quarto",
+  pattern = { "quarto", "markdown" },
   callback = function()
     require("otter").activate()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+    vim.opt_local.breakindentopt = "list:-1"
   end,
 })
 
