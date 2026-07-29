@@ -4,6 +4,7 @@ return {
     opts = {
       formatters_by_ft = {
         r = { "styler" },
+        python = { "ruff" },
       },
       format_on_save = {
         timeout_ms = 10000,
