@@ -40,3 +40,8 @@ vim.keymap.set(
 
 -- R Document
 vim.keymap.set("n", "<leader>rd", ":RDocument<CR>", { desc = "Rebuild documentation and NAMESPACE" })
+
+-- Conform
+vim.keymap.set("n", "<leader>rf", function()
+    require("conform").format({ async = true })
+end, { desc = "Format buffer" })

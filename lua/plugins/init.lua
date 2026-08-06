@@ -4,6 +4,7 @@ return {
   require("plugins.mason"),
   require("plugins.lsp"),
   require("plugins.cmp"),
+  require("plugins.conform"),
   require("plugins.telescope"),
   require("plugins.oil"),
   require("plugins.otter"),
