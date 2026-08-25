@@ -7,7 +7,7 @@ return {
 
     local r_cmd
     if vim.fn.has("win32") == 1 then
-      r_cmd = "C:/Program Files/R/R-4.5.2/bin/x64/R.exe"
+      r_cmd = "R.exe"
       py_cmd =  ".venv/Scripts/python.exe"
     else
       r_cmd = "R"
