@@ -5,14 +5,23 @@ return {
 
     vim.g.iron_map_defaults = 0
 
+    local r_cmd
+    if vim.fn.has("win32") == 1 then
+      r_cmd = "C:/Program Files/R/R-4.5.2/bin/x64/R.exe"
+      py_cmd =  ".venv/Scripts/python.exe"
+    else
+      r_cmd = "R"
+      py_cmd = "python"
+    end
+
     iron.setup({
       config = {
         repl_definition = {
           r = {
-            command = { "R.exe" },
+            command = { r_cmd },
           },
           python = {
-            command = { ".venv/Scripts/python.exe", "-i" },
+            command = { py_cmd, "-i" },
           },
         },
         repl_open_cmd = "vertical botright 80 split",
