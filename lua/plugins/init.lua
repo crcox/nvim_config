@@ -12,5 +12,5 @@ return {
   require("plugins.gitsigns"),
   require("plugins.markdown"),
   require("plugins.otter"),
-  --require("plugins.iron"),
+  require("plugins.iron"),
 }

@@ -25,7 +25,7 @@ return {
 
     vim.lsp.config("r_language_server", {
       cmd = {
-        "C:/Program Files/R/R-4.5.1/bin/x64/R.exe",
+        "C:/Program Files/R/R-4.5.2/bin/x64/R.exe",
         "--no-echo",
         "-e",
         "languageserver::run()",
