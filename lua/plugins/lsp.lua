@@ -23,9 +23,16 @@ return {
       }
     })
 
+    local r_cmd
+    if vim.fn.has("win32") == 1 then
+      r_cmd = "C:/Program Files/R/R-4.5.2/bin/x64/R.exe"
+    else
+      r_cmd = "R"
+    end
+
     vim.lsp.config("r_language_server", {
       cmd = {
-        "C:/Program Files/R/R-4.5.2/bin/x64/R.exe",
+        r_cmd,
         "--no-echo",
         "-e",
         "languageserver::run()",

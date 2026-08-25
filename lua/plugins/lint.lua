@@ -32,7 +32,7 @@ return {
           if item.ranges and item.ranges[1] and item.ranges[2] then
             end_col = item.ranges
           end
-          table.insert(table.insert(diagnostics, {
+          table.insert(diagnostics, {
             lnum = item.line_number - 1,
             col = item.column_number - 1,
             end_lnum = item.line_number - 1,
@@ -40,7 +40,7 @@ return {
             severity = severity,
             message = string.format("[%s] %s", item.linter, item.message),
             source = "lintr",
-          }))
+          })
         end
         return diagnostics
       end,
