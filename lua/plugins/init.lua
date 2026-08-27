@@ -7,10 +7,10 @@ return {
   require("plugins.conform"),
   require("plugins.telescope"),
   require("plugins.oil"),
-  require("plugins.otter"),
   require("plugins.lint"),
   require("plugins.gitsigns"),
   require("plugins.markdown"),
   require("plugins.otter"),
   require("plugins.iron"),
+  require("plugins.quarto"),
 }
