@@ -2,6 +2,7 @@ return {
   "Vigemus/iron.nvim",
   config = function()
     local iron = require("iron.core")
+    local common = require("iron.fts.common")
 
     vim.g.iron_map_defaults = 0
 
@@ -11,7 +12,7 @@ return {
       py_cmd =  ".venv/Scripts/python.exe"
     else
       r_cmd = "R"
-      py_cmd = "python"
+      py_cmd = {"ipython", "--no-autoindent"}
     end
 
     iron.setup({
@@ -21,7 +22,10 @@ return {
             command = { r_cmd },
           },
           python = {
-            command = { py_cmd, "-i" },
+            command = py_cmd,
+            format = common.bracketed_paste_python,
+            block_dividers = { "# %%", "#%%" },
+            env = {PYTHON_BASIC_REPL = "1"},
           },
         },
         repl_open_cmd = "vertical botright 80 split",
